@@ -1,26 +1,18 @@
 #-*- coding: utf-8 -*-
 
-from django import forms
 import xmltodict
-from django.conf import settings
 from django.conf.urls import patterns, url
 from django.db import models
 from django.core.urlresolvers import reverse
 from django.core import signing
-from django.forms.forms import DeclarativeFieldsMetaclass
-from django.http import (HttpResponseBadRequest, HttpResponse, 
+from django.http import (HttpResponseBadRequest, HttpResponse,
     HttpResponseRedirect, Http404)
 from django.shortcuts import render_to_response
-from django.template.context import RequestContext
 from django.template.loader import render_to_string
 from django.utils.translation import get_language, ugettext_lazy as _
-from django.utils.http import urlencode
 from django.views.decorators.csrf import csrf_exempt
-from .forms import ValueHiddenInput
 from .models import SofortTransaction, TransactionStatus
-from .utils import security_check, compute_security_checksum
 from .conf import settings
-from .models import SofortTransaction
 from shop_sofortpayment import __version__
 import requests
 
