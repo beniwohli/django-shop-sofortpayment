@@ -8,7 +8,7 @@ setup(
     author="Benjamin Wohlwend",
     author_email="bw@piquadrat.ch",
     name='django-shop-sofortpayment',
-    version='0.1.2',
+    version='0.1.3',
     description='A Sofort Bank payment backend for django SHOP',
     long_description=open(os.path.join(os.path.dirname(__file__), 'README.rst')).read(),
     url='https://github.com/piquadrat/django-shop-sofortpayment',
@@ -22,5 +22,6 @@ setup(
         'xmltodict',
     ],
     packages=find_packages(exclude=["example", "example.*"]),
-    zip_safe = False
+    zip_safe = False,
+    include_package_data=True,
 )
