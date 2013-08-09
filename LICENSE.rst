@@ -1,4 +1,4 @@
-Copyright (c) 2011, Christopher Glass
+Copyright (c) 2013, Benjamin Wohlwend
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
