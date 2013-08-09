@@ -1,0 +1,4 @@
+AUTHORS
+=======
+
+* Benjamin Wohlwend

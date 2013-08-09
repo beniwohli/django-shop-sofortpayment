@@ -1,0 +1,25 @@
+{% load l10n i18n %}{% load url from future %}{% localize off %}<?xml version="1.0" encoding="UTF-8"?>
+<multipay>
+	<project_id>{{ project_id }}</project_id>
+	<language_code>{{ language_code }}</language_code>
+	<interface_version>{{ interface_version }}</interface_version>
+	<amount>{{ amount }}</amount>
+	<currency_code>{{ currency }}</currency_code>
+	<reasons>
+		<reason>{% blocktrans %}Order Number {{ order_number }}{% endblocktrans %}</reason>
+	</reasons>
+	<user_variables>
+		<user_variable>{{ user_name }}</user_variable>
+	</user_variables>
+	<success_url>{{ success_url }}</success_url>
+	<abort_url>{{ abort_url }}</abort_url>
+	<notification_urls>
+		<notification_url notify_on="loss">{{ notification_url }}&amp;type=loss</notification_url>
+		<notification_url notify_on="pending">{{ notification_url }}&amp;type=pending</notification_url>
+		<notification_url notify_on="received">{{ notification_url }}&amp;type=received</notification_url>
+		<notification_url notify_on="refunded">{{ notification_url }}&amp;type=refunded</notification_url>
+	</notification_urls>
+	<su>
+		<customer_protection>{{ customer_protection }}</customer_protection>
+	</su>
+</multipay>{% endlocalize %}
