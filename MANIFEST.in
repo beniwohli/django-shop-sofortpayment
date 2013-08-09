@@ -2,3 +2,4 @@ include AUTHORS.rst
 include LICENSE.rst
 include README.rst
 recursive-include shop_sofortpayment/locale *
+recursive-include shop_sofortpayment/templates *

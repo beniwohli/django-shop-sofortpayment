@@ -32,8 +32,7 @@ class SofortPaymentBackend(object):
     
     def __init__(self, shop):
         self.shop = shop
-        self.skip_confirmation = settings.SHOP_SOFORT_SKIP_CONFIRMATION
-    
+
     def get_urls(self):
         urlpatterns = patterns('',
             url(r'^$', self.make_request, name='sofort'),
